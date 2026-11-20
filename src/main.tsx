@@ -12,7 +12,7 @@ import Stage from './pages/Stage'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL.replace(/\/$/, '')}>
       <ToastProvider>
         <Routes>
           <Route path="/" element={<Landing />} />

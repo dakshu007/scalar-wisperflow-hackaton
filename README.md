@@ -60,4 +60,6 @@ All screens sync live across tabs and iframes (BroadcastChannel + localStorage),
 
 ## Deploy
 
-Static site: `npm run build` produces `dist/`. Works on Vercel or Netlify (SPA rewrites included in `vercel.json` and `public/_redirects`).
+Live on GitHub Pages: https://dakshu007.github.io/scalar-wisperflow-hackaton/ — every push to the main branch redeploys via `.github/workflows/pages.yml` (`npm run build:pages` → `gh-pages` branch).
+
+Also works as a static site on Vercel or Netlify: `npm run build` produces `dist/` (SPA rewrites in `vercel.json` and `public/_redirects`).

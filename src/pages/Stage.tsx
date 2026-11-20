@@ -60,9 +60,9 @@ export default function Stage() {
       {/* Desktop stage */}
       <div className="relative z-10 hidden justify-center pt-8 pb-10 lg:flex" style={{ height: STAGE_H * scale + 60 }}>
         <div className="flex items-end justify-center gap-8" style={{ width: STAGE_W, height: STAGE_H, transform: `scale(${scale})`, transformOrigin: 'top center' }}>
-          <Phone src="/app?embed=1" w={400} h={780} label="You (employer)" sub="Speaks Tanglish" />
+          <Phone src={`${import.meta.env.BASE_URL}app?embed=1`} w={400} h={780} label="You (employer)" sub="Speaks Tanglish" />
           <div className="flex items-end gap-6">
-            {shown.map((h) => h && <Phone key={h.id} src={`/h/${h.id}?embed=1`} w={300} h={620} label={`${h.name} · ${ROLES[h.role].label}`} sub={`Hears ${LANGS[h.lang].native}`} />)}
+            {shown.map((h) => h && <Phone key={h.id} src={`${import.meta.env.BASE_URL}h/${h.id}?embed=1`} w={300} h={620} label={`${h.name} · ${ROLES[h.role].label}`} sub={`Hears ${LANGS[h.lang].native}`} />)}
           </div>
         </div>
       </div>
